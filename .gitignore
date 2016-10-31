@@ -1,0 +1,12 @@
+# Archivos a ignorar en Git
+
+# Librerías instaladas con Composer
+/vendor
+composer.lock
+
+# Librerías instaladas con Bower 
+/bower_components
+
+# Librerías instaladas con npm
+npm-debug.log
+/node_modules

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <link data-require="bootstrap-css@3.3.6" data-semver="3.3.6" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.css" />
+    <link data-require="font-awesome@4.5.0" data-semver="4.5.0" rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.css" />
+    <link rel="stylesheet" href="style.css" />
+    <script src="script.js"></script>
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <!-- ejemplo: http://bootsnipp.com/snippets/9yg5j -->      
+	    <div class="row col-md-8 col-md-offset-2">
+	    
+	      <!-- El formulario hace un POST a la ruta /grabar -->
+  		  <form class="form-horizontal" method="POST" action="{{ url('save-user') }}" >
+          <fieldset>
+            
+            <!-- Titulo -->
+            <legend><h1>User</h1></legend>
+            
+            <!-- Campo -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="Nombre">Nombre</label>  
+              <div class="col-md-5">
+                <input id="Nombre" name="username" type="text" 
+                    placeholder="" class="form-control input-md"
+                    value="{{ user.username }}" >
+              </div>
+            </div>            
+
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="Roles">Roles</label>  
+              <div class="col-md-5">
+                <input id="Roles" name="roles" type="text" 
+                      placeholder="" class="form-control input-md"
+                      value="{{ user.roles }}" >
+              </div>
+            </div>            
+
+            <!-- Button -->
+            <div class="form-group">
+              <label class="col-md-4 control-label" for="Enviar"></label>
+              <div class="col-md-4">
+                <input type="hidden" name="id" value="{{ user.id }}">
+                <button id="Enviar" name="enviar" class="btn btn-primary">Enviar</button>
+              </div>
+            </div>
+            
+          </fieldset>  
+        </form>
+      </div>
+
+    </div>
+
+  </body>
+</html>

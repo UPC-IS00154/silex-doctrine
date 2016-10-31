@@ -1,0 +1,15 @@
+{
+  "name": "jchavarr1/silex-usuarios-doctrine",
+  "require": {
+    "silex/silex": "^1.3",
+    "twig/twig": "^1.23",
+    "symfony/twig-bridge": "^2.7",
+    "doctrine/dbal": "v2.5.4",
+    "symfony/doctrine-bridge": "^2.7"
+  },
+  "autoload" : {
+    "psr-4" : {
+      "Modelo\\" : "Modelo/"
+    }
+  }
+}
